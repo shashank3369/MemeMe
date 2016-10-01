@@ -1,26 +1,66 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yZZ-br-7G2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="D2F-0B-YWe">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yZZ-br-7G2" customClass="ViewController" customModule="MemeMe_1_0_The_Meme_Editor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="uaA-P1-7dC"/>
+                        <viewControllerLayoutGuide type="bottom" id="1C3-7G-GWD"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="uS8-r5-2S7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaM-z3-ZUa">
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="I4t-G5-k89"/>
+                                    <barButtonItem systemItem="camera" id="XNv-xm-Y2S"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="x3e-iW-4gB"/>
+                                    <barButtonItem title="Album" id="tdX-70-V55"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="cFa-2r-c7R"/>
+                                </items>
+                                <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </toolbar>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdf-RV-VNI">
+                                <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <navigationItem title="Meme Me" id="tLb-YS-aZ9">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="kxI-XG-C40"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="R6T-FM-9IU"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fLc-Pw-aqg">
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rdf-RV-VNI" firstAttribute="leading" secondItem="uS8-r5-2S7" secondAttribute="leading" id="96r-NB-Gzb"/>
+                            <constraint firstItem="fLc-Pw-aqg" firstAttribute="leading" secondItem="uS8-r5-2S7" secondAttribute="leading" id="9a2-JH-b1W"/>
+                            <constraint firstAttribute="trailing" secondItem="fLc-Pw-aqg" secondAttribute="trailing" id="BmZ-hR-dYH"/>
+                            <constraint firstItem="Rdf-RV-VNI" firstAttribute="top" secondItem="uS8-r5-2S7" secondAttribute="top" id="Gbe-dI-AHY"/>
+                            <constraint firstAttribute="trailing" secondItem="Rdf-RV-VNI" secondAttribute="trailing" id="OYV-L1-oQc"/>
+                            <constraint firstAttribute="bottom" secondItem="SaM-z3-ZUa" secondAttribute="bottom" id="dRM-HX-WeP"/>
+                            <constraint firstAttribute="bottom" secondItem="fLc-Pw-aqg" secondAttribute="bottom" constant="38" id="jz0-PX-sVN"/>
+                            <constraint firstItem="fLc-Pw-aqg" firstAttribute="top" secondItem="Rdf-RV-VNI" secondAttribute="bottom" id="ldY-tS-P2U"/>
+                            <constraint firstItem="SaM-z3-ZUa" firstAttribute="leading" secondItem="uS8-r5-2S7" secondAttribute="leading" id="oCN-DT-U5E"/>
+                            <constraint firstAttribute="trailing" secondItem="SaM-z3-ZUa" secondAttribute="trailing" id="p1U-Md-Pg4"/>
+                        </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wSN-wu-7iN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-34.399999999999999" y="-54.422788605697157"/>
         </scene>
     </scenes>
 </document>
