@@ -8,8 +8,10 @@
 
 import UIKit
 
-class MainVC: UIViewController {
-
+class MainVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    @IBOutlet weak var toolBar: UIToolbar!
+    @IBOutlet weak var navigationBar: UINavigationBar!
+    @IBOutlet weak var imageView: UIImageView!
     let textAttributes = [
         NSStrokeColorAttributeName: UIColor.black,
         NSForegroundColorAttributeName: UIColor.white,
@@ -21,7 +23,7 @@ class MainVC: UIViewController {
     @IBOutlet weak var bottomTextField: UITextField!
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
-    
+    @IBOutlet weak var shareButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -47,6 +49,7 @@ class MainVC: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        shareButton.isEnabled = (imageView.image != nil)
         self.subscribeToKeyboardNotifications()
     }
     
@@ -57,11 +60,35 @@ class MainVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera)
+        
     }
     
     
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+    @IBAction func pickCamera(_ sender: AnyObject) {
+        let picker = UIImagePickerController()
+        picker.sourceType = .camera
+        picker.delegate = self
+        self.present(picker, animated: true, completion: nil)
+    }
+    @IBAction func chooseFromAlbum(_ sender: AnyObject) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        self.present(picker, animated: true, completion: nil)
+
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            imageView.image = image
+        }
+        else {
+            
+        }
+        self.dismiss(animated: true, completion: nil)
     }
 
 }

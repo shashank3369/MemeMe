@@ -28,10 +28,38 @@ extension MainVC {
     }
     
     func keyboardWillShow(notification: NSNotification) {
-        self.view.frame.origin.y -= getKeyboardHeight(notification: notification)
+        if bottomTextField.isFirstResponder {
+            self.view.frame.origin.y -= getKeyboardHeight(notification: notification)
+        }
     }
     
     func keyboardWillHide(notification: NSNotification) {
         self.view.frame.origin.y = 0
     }
+    
+    func generateMemedImage() -> UIImage {
+        
+        toolBar.isHidden = true
+        navigationBar.isHidden = true
+        
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        view.drawHierarchy(in: self.view.frame,
+                                     afterScreenUpdates: true)
+        let memedImage : UIImage =
+            UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        toolBar.isHidden = false
+        navigationBar.isHidden = false
+        return memedImage
+
+    }
+    
+    func save () {
+        let memedImage = generateMemedImage()
+        let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, image:
+            imageView.image!, memeImage: memedImage)
+    }
+    
+    
 }

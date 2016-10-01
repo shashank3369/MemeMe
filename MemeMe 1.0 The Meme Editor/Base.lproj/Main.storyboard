@@ -22,9 +22,17 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaM-z3-ZUa">
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="I4t-G5-k89"/>
-                                    <barButtonItem systemItem="camera" id="XNv-xm-Y2S"/>
+                                    <barButtonItem systemItem="camera" id="XNv-xm-Y2S">
+                                        <connections>
+                                            <action selector="pickCamera:" destination="yZZ-br-7G2" id="z9k-Rz-UCm"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="x3e-iW-4gB"/>
-                                    <barButtonItem title="Album" id="tdX-70-V55"/>
+                                    <barButtonItem title="Album" id="tdX-70-V55">
+                                        <connections>
+                                            <action selector="chooseFromAlbum:" destination="yZZ-br-7G2" id="Ga3-Vo-xQ5"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="cFa-2r-c7R"/>
                                 </items>
                                 <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -66,7 +74,7 @@
                             <constraint firstAttribute="trailing" secondItem="fLc-Pw-aqg" secondAttribute="trailing" id="BmZ-hR-dYH"/>
                             <constraint firstItem="Rdf-RV-VNI" firstAttribute="top" secondItem="uS8-r5-2S7" secondAttribute="top" id="Gbe-dI-AHY"/>
                             <constraint firstAttribute="trailing" secondItem="Rdf-RV-VNI" secondAttribute="trailing" id="OYV-L1-oQc"/>
-                            <constraint firstItem="1C3-7G-GWD" firstAttribute="top" secondItem="4Ln-Mr-cth" secondAttribute="bottom" constant="8" symbolic="YES" id="Xo7-k6-a3i"/>
+                            <constraint firstItem="SaM-z3-ZUa" firstAttribute="top" secondItem="4Ln-Mr-cth" secondAttribute="bottom" constant="20" id="Tih-v9-oa8"/>
                             <constraint firstAttribute="bottom" secondItem="SaM-z3-ZUa" secondAttribute="bottom" id="dRM-HX-WeP"/>
                             <constraint firstAttribute="bottom" secondItem="fLc-Pw-aqg" secondAttribute="bottom" constant="38" id="jz0-PX-sVN"/>
                             <constraint firstItem="aXU-n9-IhI" firstAttribute="leading" secondItem="4Ln-Mr-cth" secondAttribute="leading" id="kxB-kD-tLn"/>
@@ -83,6 +91,10 @@
                     <connections>
                         <outlet property="bottomTextField" destination="4Ln-Mr-cth" id="ZXL-M3-HwU"/>
                         <outlet property="cameraButton" destination="XNv-xm-Y2S" id="qza-A7-pyl"/>
+                        <outlet property="imageView" destination="fLc-Pw-aqg" id="rFq-t2-yxV"/>
+                        <outlet property="navigationBar" destination="Rdf-RV-VNI" id="YzF-hr-IJX"/>
+                        <outlet property="shareButton" destination="kxI-XG-C40" id="wn2-pn-Vqj"/>
+                        <outlet property="toolBar" destination="SaM-z3-ZUa" id="AO3-Dm-wfi"/>
                         <outlet property="topTextField" destination="aXU-n9-IhI" id="9kz-L6-cF5"/>
                     </connections>
                 </viewController>
