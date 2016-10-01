@@ -3,13 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="D2F-0B-YWe">
             <objects>
-                <viewController id="yZZ-br-7G2" customClass="ViewController" customModule="MemeMe_1_0_The_Meme_Editor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yZZ-br-7G2" customClass="MainVC" customModule="MemeMe_1_0_The_Meme_Editor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uaA-P1-7dC"/>
                         <viewControllerLayoutGuide type="bottom" id="1C3-7G-GWD"/>
@@ -37,26 +38,53 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fLc-Pw-aqg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fLc-Pw-aqg">
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="aXU-n9-IhI">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="fD2-np-c1T"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Ln-Mr-cth">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BDw-zb-bkf"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Rdf-RV-VNI" firstAttribute="leading" secondItem="uS8-r5-2S7" secondAttribute="leading" id="96r-NB-Gzb"/>
                             <constraint firstItem="fLc-Pw-aqg" firstAttribute="leading" secondItem="uS8-r5-2S7" secondAttribute="leading" id="9a2-JH-b1W"/>
+                            <constraint firstItem="aXU-n9-IhI" firstAttribute="leading" secondItem="uS8-r5-2S7" secondAttribute="leadingMargin" id="ALO-ry-Ogl"/>
                             <constraint firstAttribute="trailing" secondItem="fLc-Pw-aqg" secondAttribute="trailing" id="BmZ-hR-dYH"/>
                             <constraint firstItem="Rdf-RV-VNI" firstAttribute="top" secondItem="uS8-r5-2S7" secondAttribute="top" id="Gbe-dI-AHY"/>
                             <constraint firstAttribute="trailing" secondItem="Rdf-RV-VNI" secondAttribute="trailing" id="OYV-L1-oQc"/>
+                            <constraint firstItem="1C3-7G-GWD" firstAttribute="top" secondItem="4Ln-Mr-cth" secondAttribute="bottom" constant="8" symbolic="YES" id="Xo7-k6-a3i"/>
                             <constraint firstAttribute="bottom" secondItem="SaM-z3-ZUa" secondAttribute="bottom" id="dRM-HX-WeP"/>
                             <constraint firstAttribute="bottom" secondItem="fLc-Pw-aqg" secondAttribute="bottom" constant="38" id="jz0-PX-sVN"/>
+                            <constraint firstItem="aXU-n9-IhI" firstAttribute="leading" secondItem="4Ln-Mr-cth" secondAttribute="leading" id="kxB-kD-tLn"/>
                             <constraint firstItem="fLc-Pw-aqg" firstAttribute="top" secondItem="Rdf-RV-VNI" secondAttribute="bottom" id="ldY-tS-P2U"/>
                             <constraint firstItem="SaM-z3-ZUa" firstAttribute="leading" secondItem="uS8-r5-2S7" secondAttribute="leading" id="oCN-DT-U5E"/>
                             <constraint firstAttribute="trailing" secondItem="SaM-z3-ZUa" secondAttribute="trailing" id="p1U-Md-Pg4"/>
+                            <constraint firstItem="aXU-n9-IhI" firstAttribute="centerX" secondItem="Rdf-RV-VNI" secondAttribute="centerX" id="sHI-Rf-teC"/>
+                            <constraint firstItem="aXU-n9-IhI" firstAttribute="top" secondItem="Rdf-RV-VNI" secondAttribute="bottom" constant="20" id="sYo-vC-mGy"/>
+                            <constraint firstItem="aXU-n9-IhI" firstAttribute="trailing" secondItem="4Ln-Mr-cth" secondAttribute="trailing" id="sxY-7L-7eH"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="bottomTextField" destination="4Ln-Mr-cth" id="ZXL-M3-HwU"/>
+                        <outlet property="cameraButton" destination="XNv-xm-Y2S" id="qza-A7-pyl"/>
+                        <outlet property="topTextField" destination="aXU-n9-IhI" id="9kz-L6-cF5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wSN-wu-7iN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
