@@ -56,9 +56,26 @@ extension MainVC {
     }
     
     func save (memedImage: UIImage) {
-        let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, image:
+        let _ = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, image:
             imageView.image!, memeImage: memedImage)
     }
     
+    
+    func prepareTextField(textField: UITextField, defaultText: String){
+        //aligning to center
+        
+        //setting default text
+        textField.text = defaultText
+        
+        //setting text Attributes
+        textField.defaultTextAttributes = textAttributes
+        
+        //setting text field Delegate
+        textField.delegate = textFieldsDelegate
+        
+        //aligning to center
+        textField.textAlignment = .center
+
+    }
     
 }

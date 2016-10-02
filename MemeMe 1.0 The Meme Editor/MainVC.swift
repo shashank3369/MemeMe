@@ -34,32 +34,17 @@ class MainVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         NSStrokeColorAttributeName: UIColor.black,
         NSForegroundColorAttributeName: UIColor.white,
         NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-        NSStrokeWidthAttributeName : 3.0
+        NSStrokeWidthAttributeName : -3.0
+        
     ] as [String : Any]
     
     let textFieldsDelegate = TextFieldsDelegate()
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-    
+        super.viewDidLoad()        
+        prepareTextField(textField: bottomTextField, defaultText: "BOTTOM")
+        prepareTextField(textField: topTextField, defaultText: "TOP")
         
-        //setting properties of text field
-        
-        //aligning text
-        bottomTextField.textAlignment = .center
-        topTextField.textAlignment = .center
-        
-        //setting default text
-        bottomTextField.text = "BOTTOM"
-        topTextField.text = "TOP"
-        
-        //setting text Attributes
-        bottomTextField.defaultTextAttributes = textAttributes
-        topTextField.defaultTextAttributes = textAttributes
-        
-        //setting text field Delegate
-        topTextField.delegate = textFieldsDelegate
-        bottomTextField.delegate = textFieldsDelegate
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -67,6 +52,12 @@ class MainVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera)
         shareButton.isEnabled = (imageView.image != nil)
         self.subscribeToKeyboardNotifications()
+    }
+    
+    @IBAction func cancel(_ sender: AnyObject) {
+        imageView.image = nil
+        prepareTextField(textField: bottomTextField, defaultText: "BOTTOM")
+        prepareTextField(textField: topTextField, defaultText: "TOP")
     }
     
     override func viewWillDisappear(_ animated: Bool) {

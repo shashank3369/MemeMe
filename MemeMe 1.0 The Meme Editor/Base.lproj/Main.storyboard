@@ -46,7 +46,11 @@
                                                 <action selector="shareMeme:" destination="yZZ-br-7G2" id="nSH-Zm-BQp"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="R6T-FM-9IU"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="R6T-FM-9IU">
+                                            <connections>
+                                                <action selector="cancel:" destination="yZZ-br-7G2" id="kcz-zO-v98"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -55,16 +59,16 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="fD2-np-c1T"/>
                                 </constraints>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Ln-Mr-cth">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="4Ln-Mr-cth">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="343" id="Atb-0R-4lH"/>
                                     <constraint firstAttribute="height" constant="50" id="BDw-zb-bkf"/>
                                 </constraints>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
