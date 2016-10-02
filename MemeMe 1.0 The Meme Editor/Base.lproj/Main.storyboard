@@ -41,15 +41,17 @@
                                 <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
                                     <navigationItem title="Meme Me" id="tLb-YS-aZ9">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="kxI-XG-C40"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="kxI-XG-C40">
+                                            <connections>
+                                                <action selector="shareMeme:" destination="yZZ-br-7G2" id="nSH-Zm-BQp"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Cancel" id="R6T-FM-9IU"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fLc-Pw-aqg">
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="aXU-n9-IhI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fLc-Pw-aqg"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="aXU-n9-IhI">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="fD2-np-c1T"/>
                                 </constraints>
@@ -59,6 +61,7 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Ln-Mr-cth">
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="Atb-0R-4lH"/>
                                     <constraint firstAttribute="height" constant="50" id="BDw-zb-bkf"/>
                                 </constraints>
                                 <nil key="textColor"/>
@@ -66,23 +69,22 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Rdf-RV-VNI" firstAttribute="leading" secondItem="uS8-r5-2S7" secondAttribute="leading" id="96r-NB-Gzb"/>
                             <constraint firstItem="fLc-Pw-aqg" firstAttribute="leading" secondItem="uS8-r5-2S7" secondAttribute="leading" id="9a2-JH-b1W"/>
-                            <constraint firstItem="aXU-n9-IhI" firstAttribute="leading" secondItem="uS8-r5-2S7" secondAttribute="leadingMargin" id="ALO-ry-Ogl"/>
                             <constraint firstAttribute="trailing" secondItem="fLc-Pw-aqg" secondAttribute="trailing" id="BmZ-hR-dYH"/>
+                            <constraint firstItem="aXU-n9-IhI" firstAttribute="top" secondItem="Rdf-RV-VNI" secondAttribute="bottom" constant="20" id="GJp-cy-x1j"/>
                             <constraint firstItem="Rdf-RV-VNI" firstAttribute="top" secondItem="uS8-r5-2S7" secondAttribute="top" id="Gbe-dI-AHY"/>
                             <constraint firstAttribute="trailing" secondItem="Rdf-RV-VNI" secondAttribute="trailing" id="OYV-L1-oQc"/>
-                            <constraint firstItem="SaM-z3-ZUa" firstAttribute="top" secondItem="4Ln-Mr-cth" secondAttribute="bottom" constant="20" id="Tih-v9-oa8"/>
+                            <constraint firstItem="SaM-z3-ZUa" firstAttribute="top" secondItem="4Ln-Mr-cth" secondAttribute="bottom" constant="20" id="ZAV-v2-usR"/>
                             <constraint firstAttribute="bottom" secondItem="SaM-z3-ZUa" secondAttribute="bottom" id="dRM-HX-WeP"/>
-                            <constraint firstAttribute="bottom" secondItem="fLc-Pw-aqg" secondAttribute="bottom" constant="38" id="jz0-PX-sVN"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="fLc-Pw-aqg" secondAttribute="bottom" constant="38" id="f50-9z-GUT"/>
                             <constraint firstItem="aXU-n9-IhI" firstAttribute="leading" secondItem="4Ln-Mr-cth" secondAttribute="leading" id="kxB-kD-tLn"/>
                             <constraint firstItem="fLc-Pw-aqg" firstAttribute="top" secondItem="Rdf-RV-VNI" secondAttribute="bottom" id="ldY-tS-P2U"/>
                             <constraint firstItem="SaM-z3-ZUa" firstAttribute="leading" secondItem="uS8-r5-2S7" secondAttribute="leading" id="oCN-DT-U5E"/>
                             <constraint firstAttribute="trailing" secondItem="SaM-z3-ZUa" secondAttribute="trailing" id="p1U-Md-Pg4"/>
-                            <constraint firstItem="aXU-n9-IhI" firstAttribute="centerX" secondItem="Rdf-RV-VNI" secondAttribute="centerX" id="sHI-Rf-teC"/>
-                            <constraint firstItem="aXU-n9-IhI" firstAttribute="top" secondItem="Rdf-RV-VNI" secondAttribute="bottom" constant="20" id="sYo-vC-mGy"/>
+                            <constraint firstItem="aXU-n9-IhI" firstAttribute="centerX" secondItem="Rdf-RV-VNI" secondAttribute="centerX" id="r0y-fP-84O"/>
                             <constraint firstItem="aXU-n9-IhI" firstAttribute="trailing" secondItem="4Ln-Mr-cth" secondAttribute="trailing" id="sxY-7L-7eH"/>
                         </constraints>
                     </view>

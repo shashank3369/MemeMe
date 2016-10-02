@@ -9,9 +9,27 @@
 import UIKit
 
 class MainVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
     @IBOutlet weak var toolBar: UIToolbar!
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var bottomTextField: UITextField!
+    @IBOutlet weak var topTextField: UITextField!
+    @IBOutlet weak var cameraButton: UIBarButtonItem!
+    @IBOutlet weak var shareButton: UIBarButtonItem!
+    
+    @IBAction func shareMeme(_ sender: AnyObject) {
+        let generatedImage = generateMemedImage()
+        let activityViewController = UIActivityViewController(activityItems: [generatedImage], applicationActivities: nil)
+        self.present(activityViewController, animated: true, completion: nil)
+        activityViewController.completionWithItemsHandler = {(_, completed, _, _) in
+            if completed {
+                self.save(memedImage: generatedImage)
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
+    }
+    
     let textAttributes = [
         NSStrokeColorAttributeName: UIColor.black,
         NSForegroundColorAttributeName: UIColor.white,
@@ -20,10 +38,7 @@ class MainVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     ] as [String : Any]
     
     let textFieldsDelegate = TextFieldsDelegate()
-    @IBOutlet weak var bottomTextField: UITextField!
-    @IBOutlet weak var topTextField: UITextField!
-    @IBOutlet weak var cameraButton: UIBarButtonItem!
-    @IBOutlet weak var shareButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -49,6 +64,7 @@ class MainVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera)
         shareButton.isEnabled = (imageView.image != nil)
         self.subscribeToKeyboardNotifications()
     }
@@ -57,12 +73,6 @@ class MainVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         super.viewWillDisappear(animated)
         self.unsubscribeToKeyboardNotifications()
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera)
-        
-    }
-    
     
     override var prefersStatusBarHidden: Bool {
         return true

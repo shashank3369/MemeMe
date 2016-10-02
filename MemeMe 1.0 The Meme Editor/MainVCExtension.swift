@@ -55,8 +55,7 @@ extension MainVC {
 
     }
     
-    func save () {
-        let memedImage = generateMemedImage()
+    func save (memedImage: UIImage) {
         let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, image:
             imageView.image!, memeImage: memedImage)
     }
