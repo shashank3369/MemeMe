@@ -58,6 +58,7 @@ class MainVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         imageView.image = nil
         prepareTextField(textField: bottomTextField, defaultText: "BOTTOM")
         prepareTextField(textField: topTextField, defaultText: "TOP")
+        shareButton.isEnabled = false
     }
     
     override func viewWillDisappear(_ animated: Bool) {

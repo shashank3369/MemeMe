@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -80,10 +79,10 @@
                             <constraint firstAttribute="trailing" secondItem="fLc-Pw-aqg" secondAttribute="trailing" id="BmZ-hR-dYH"/>
                             <constraint firstItem="aXU-n9-IhI" firstAttribute="top" secondItem="Rdf-RV-VNI" secondAttribute="bottom" constant="20" id="GJp-cy-x1j"/>
                             <constraint firstItem="Rdf-RV-VNI" firstAttribute="top" secondItem="uS8-r5-2S7" secondAttribute="top" id="Gbe-dI-AHY"/>
+                            <constraint firstItem="SaM-z3-ZUa" firstAttribute="top" secondItem="fLc-Pw-aqg" secondAttribute="bottom" id="Mvk-Ux-LRk"/>
                             <constraint firstAttribute="trailing" secondItem="Rdf-RV-VNI" secondAttribute="trailing" id="OYV-L1-oQc"/>
                             <constraint firstItem="SaM-z3-ZUa" firstAttribute="top" secondItem="4Ln-Mr-cth" secondAttribute="bottom" constant="20" id="ZAV-v2-usR"/>
                             <constraint firstAttribute="bottom" secondItem="SaM-z3-ZUa" secondAttribute="bottom" id="dRM-HX-WeP"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="fLc-Pw-aqg" secondAttribute="bottom" constant="38" id="f50-9z-GUT"/>
                             <constraint firstItem="aXU-n9-IhI" firstAttribute="leading" secondItem="4Ln-Mr-cth" secondAttribute="leading" id="kxB-kD-tLn"/>
                             <constraint firstItem="fLc-Pw-aqg" firstAttribute="top" secondItem="Rdf-RV-VNI" secondAttribute="bottom" id="ldY-tS-P2U"/>
                             <constraint firstItem="SaM-z3-ZUa" firstAttribute="leading" secondItem="uS8-r5-2S7" secondAttribute="leading" id="oCN-DT-U5E"/>
