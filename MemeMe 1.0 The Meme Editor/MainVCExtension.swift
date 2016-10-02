@@ -29,12 +29,12 @@ extension MainVC {
     
     func keyboardWillShow(notification: NSNotification) {
         if bottomTextField.isFirstResponder {
-            self.view.frame.origin.y -= getKeyboardHeight(notification: notification)
+            view.frame.origin.y =  -getKeyboardHeight(notification: notification)
         }
     }
     
     func keyboardWillHide(notification: NSNotification) {
-        self.view.frame.origin.y = 0
+        view.frame.origin.y = 0
     }
     
     func generateMemedImage() -> UIImage {
@@ -78,12 +78,10 @@ extension MainVC {
 
     }
     
-    func pickPictureWithSource(source: String) {
+    func pickPictureWithSource(source: UIImagePickerControllerSourceType) {
         let picker = UIImagePickerController()
-        if (source == "camera") {
-            picker.sourceType = .camera
-        }
+        picker.sourceType = source
         picker.delegate = self
-        self.present(picker, animated: true, completion: nil)
+        present(picker, animated: true, completion: nil)
     }
 }

@@ -21,7 +21,7 @@ class MainVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     @IBAction func shareMeme(_ sender: AnyObject) {
         let generatedImage = generateMemedImage()
         let activityViewController = UIActivityViewController(activityItems: [generatedImage], applicationActivities: nil)
-        self.present(activityViewController, animated: true, completion: nil)
+        present(activityViewController, animated: true, completion: nil)
         activityViewController.completionWithItemsHandler = {(_, completed, _, _) in
             if completed {
                 self.save(memedImage: generatedImage)
@@ -51,7 +51,7 @@ class MainVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         super.viewWillAppear(animated)
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera)
         shareButton.isEnabled = (imageView.image != nil)
-        self.subscribeToKeyboardNotifications()
+        subscribeToKeyboardNotifications()
     }
     
     @IBAction func cancel(_ sender: AnyObject) {
@@ -63,7 +63,7 @@ class MainVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.unsubscribeToKeyboardNotifications()
+        unsubscribeToKeyboardNotifications()
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -71,10 +71,10 @@ class MainVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     }
     
     @IBAction func pickCamera(_ sender: AnyObject) {
-        pickPictureWithSource(source: "camera")
+        pickPictureWithSource(source: UIImagePickerControllerSourceType.camera)
     }
     @IBAction func chooseFromAlbum(_ sender: AnyObject) {
-        pickPictureWithSource(source: "")
+        pickPictureWithSource(source: UIImagePickerControllerSourceType.photoLibrary)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -84,11 +84,11 @@ class MainVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         else {
             
         }
-        self.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        self.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 }
 
