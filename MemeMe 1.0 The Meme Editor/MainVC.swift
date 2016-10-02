@@ -71,16 +71,10 @@ class MainVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     }
     
     @IBAction func pickCamera(_ sender: AnyObject) {
-        let picker = UIImagePickerController()
-        picker.sourceType = .camera
-        picker.delegate = self
-        self.present(picker, animated: true, completion: nil)
+        pickPictureWithSource(source: "camera")
     }
     @IBAction func chooseFromAlbum(_ sender: AnyObject) {
-        let picker = UIImagePickerController()
-        picker.delegate = self
-        self.present(picker, animated: true, completion: nil)
-
+        pickPictureWithSource(source: "")
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -93,5 +87,8 @@ class MainVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         self.dismiss(animated: true, completion: nil)
     }
 
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 

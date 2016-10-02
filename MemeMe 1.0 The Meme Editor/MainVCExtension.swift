@@ -78,4 +78,12 @@ extension MainVC {
 
     }
     
+    func pickPictureWithSource(source: String) {
+        let picker = UIImagePickerController()
+        if (source == "camera") {
+            picker.sourceType = .camera
+        }
+        picker.delegate = self
+        self.present(picker, animated: true, completion: nil)
+    }
 }
