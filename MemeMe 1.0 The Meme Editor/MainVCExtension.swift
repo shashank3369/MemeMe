@@ -84,4 +84,8 @@ extension MainVC {
         picker.delegate = self
         present(picker, animated: true, completion: nil)
     }
+    
+    func updateEditButtonEnabled() {
+        editButton.isEnabled = (imageView.image != nil)
+    }
 }

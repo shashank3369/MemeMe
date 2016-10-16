@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import PhotoCropEditor
 
-class MainVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class MainVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CropViewControllerDelegate {
     
+    @IBOutlet weak var editButton: UIBarButtonItem!
     @IBOutlet weak var toolBar: UIToolbar!
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var imageView: UIImageView!
@@ -44,7 +46,7 @@ class MainVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         super.viewDidLoad()        
         prepareTextField(textField: bottomTextField, defaultText: "BOTTOM")
         prepareTextField(textField: topTextField, defaultText: "TOP")
-        
+        updateEditButtonEnabled()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -59,6 +61,7 @@ class MainVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         prepareTextField(textField: bottomTextField, defaultText: "BOTTOM")
         prepareTextField(textField: topTextField, defaultText: "TOP")
         shareButton.isEnabled = false
+        updateEditButtonEnabled()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -77,6 +80,21 @@ class MainVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         pickPictureWithSource(source: UIImagePickerControllerSourceType.photoLibrary)
     }
     
+    @IBAction func cropPhoto(_ sender: AnyObject) {
+        guard let image = imageView.image else {
+            return
+        }
+ 
+        // Use view controller
+        let controller = CropViewController()
+        controller.delegate = self
+        controller.image = image
+        
+        let navController = UINavigationController(rootViewController: controller)
+        present(navController, animated: true, completion: nil)
+    
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageView.image = image
@@ -89,6 +107,24 @@ class MainVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    
+    // CropView Delegate Methods
+    func cropViewController(_ controller: CropViewController, didFinishCroppingImage image: UIImage) {
+        
+    }
+    
+    func cropViewController(_ controller: CropViewController, didFinishCroppingImage image: UIImage, transform: CGAffineTransform, cropRect: CGRect) {
+        controller.dismiss(animated: true, completion: nil)
+        imageView.image = image
+        updateEditButtonEnabled()
+    }
+    
+    func cropViewControllerDidCancel(_ controller: CropViewController) {
+        controller.dismiss(animated: true, completion: nil)
+        updateEditButtonEnabled()
+        
     }
 }
 
