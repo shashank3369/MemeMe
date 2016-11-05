@@ -28,9 +28,10 @@ class MainVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
             if completed {
                 self.save(memedImage: generatedImage)
                 self.dismiss(animated: true, completion: nil)
+                self.dismiss(animated: true, completion: nil)
+
             }
         }
-        self.dismiss(animated: true, completion: nil)
     }
     
     let textAttributes = [

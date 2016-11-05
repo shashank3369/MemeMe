@@ -13,6 +13,7 @@ class MemeTableViewController: UITableViewController {
     var memes: [Meme] {
         return (UIApplication.shared.delegate as! AppDelegate).memes
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -45,6 +46,9 @@ class MemeTableViewController: UITableViewController {
         return  memes.count
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "memeIdentifier", for: indexPath) as! MemeTableViewCell
