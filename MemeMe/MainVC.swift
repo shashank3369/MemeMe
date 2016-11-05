@@ -103,6 +103,7 @@ class MainVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
             
         }
         dismiss(animated: true, completion: nil)
+        updateEditButtonEnabled()
     }
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

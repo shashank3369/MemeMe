@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0800"
+   LastUpgradeVersion = "0810"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8A1FA5DC1D9F7FC400545AF9"
-               BuildableName = "MemeMe 1.0 The Meme Editor.app"
-               BlueprintName = "MemeMe 1.0 The Meme Editor"
-               ReferencedContainer = "container:MemeMe 1.0 The Meme Editor.xcodeproj">
+               BuildableName = "MemeMe.app"
+               BlueprintName = "MemeMe"
+               ReferencedContainer = "container:MemeMe.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8A1FA5F01D9F7FC400545AF9"
-               BuildableName = "MemeMe 1.0 The Meme EditorTests.xctest"
-               BlueprintName = "MemeMe 1.0 The Meme EditorTests"
-               ReferencedContainer = "container:MemeMe 1.0 The Meme Editor.xcodeproj">
+               BuildableName = "MemeMeTests.xctest"
+               BlueprintName = "MemeMeTests"
+               ReferencedContainer = "container:MemeMe.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8A1FA5FB1D9F7FC400545AF9"
-               BuildableName = "MemeMe 1.0 The Meme EditorUITests.xctest"
-               BlueprintName = "MemeMe 1.0 The Meme EditorUITests"
-               ReferencedContainer = "container:MemeMe 1.0 The Meme Editor.xcodeproj">
+               BuildableName = "MemeMeUITests.xctest"
+               BlueprintName = "MemeMeUITests"
+               ReferencedContainer = "container:MemeMe.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8A1FA5DC1D9F7FC400545AF9"
-            BuildableName = "MemeMe 1.0 The Meme Editor.app"
-            BlueprintName = "MemeMe 1.0 The Meme Editor"
-            ReferencedContainer = "container:MemeMe 1.0 The Meme Editor.xcodeproj">
+            BuildableName = "MemeMe.app"
+            BlueprintName = "MemeMe"
+            ReferencedContainer = "container:MemeMe.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8A1FA5DC1D9F7FC400545AF9"
-            BuildableName = "MemeMe 1.0 The Meme Editor.app"
-            BlueprintName = "MemeMe 1.0 The Meme Editor"
-            ReferencedContainer = "container:MemeMe 1.0 The Meme Editor.xcodeproj">
+            BuildableName = "MemeMe.app"
+            BlueprintName = "MemeMe"
+            ReferencedContainer = "container:MemeMe.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8A1FA5DC1D9F7FC400545AF9"
-            BuildableName = "MemeMe 1.0 The Meme Editor.app"
-            BlueprintName = "MemeMe 1.0 The Meme Editor"
-            ReferencedContainer = "container:MemeMe 1.0 The Meme Editor.xcodeproj">
+            BuildableName = "MemeMe.app"
+            BlueprintName = "MemeMe"
+            ReferencedContainer = "container:MemeMe.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

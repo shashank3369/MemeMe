@@ -51,17 +51,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8A1FA5DD1D9F7FC400545AF9 /* MemeMe 1.0 The Meme Editor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MemeMe 1.0 The Meme Editor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A1FA5DD1D9F7FC400545AF9 /* MemeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A1FA5E01D9F7FC400545AF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A1FA5E21D9F7FC400545AF9 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		8A1FA5E51D9F7FC400545AF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A1FA5E71D9F7FC400545AF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A1FA5EA1D9F7FC400545AF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A1FA5EC1D9F7FC400545AF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8A1FA5F11D9F7FC400545AF9 /* MemeMe 1.0 The Meme EditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MemeMe 1.0 The Meme EditorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A1FA5F11D9F7FC400545AF9 /* MemeMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemeMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A1FA5F51D9F7FC400545AF9 /* MemeMe_1_0_The_Meme_EditorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeMe_1_0_The_Meme_EditorTests.swift; sourceTree = "<group>"; };
 		8A1FA5F71D9F7FC400545AF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8A1FA5FC1D9F7FC400545AF9 /* MemeMe 1.0 The Meme EditorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MemeMe 1.0 The Meme EditorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A1FA5FC1D9F7FC400545AF9 /* MemeMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemeMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A1FA6001D9F7FC400545AF9 /* MemeMe_1_0_The_Meme_EditorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeMe_1_0_The_Meme_EditorUITests.swift; sourceTree = "<group>"; };
 		8A1FA6021D9F7FC400545AF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A298E751DB343A6005B7BA0 /* PhotoCropEditor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotoCropEditor.framework; path = Carthage/Build/iOS/PhotoCropEditor.framework; sourceTree = "<group>"; };
@@ -99,9 +99,9 @@
 		8A1FA5D41D9F7FC400545AF9 = {
 			isa = PBXGroup;
 			children = (
-				8A1FA5DF1D9F7FC400545AF9 /* MemeMe 1.0 The Meme Editor */,
-				8A1FA5F41D9F7FC400545AF9 /* MemeMe 1.0 The Meme EditorTests */,
-				8A1FA5FF1D9F7FC400545AF9 /* MemeMe 1.0 The Meme EditorUITests */,
+				8A1FA5DF1D9F7FC400545AF9 /* MemeMe */,
+				8A1FA5F41D9F7FC400545AF9 /* MemeMe Tests */,
+				8A1FA5FF1D9F7FC400545AF9 /* MemeMe UITests */,
 				8A1FA5DE1D9F7FC400545AF9 /* Products */,
 				8A298E741DB343A6005B7BA0 /* Frameworks */,
 			);
@@ -110,14 +110,14 @@
 		8A1FA5DE1D9F7FC400545AF9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8A1FA5DD1D9F7FC400545AF9 /* MemeMe 1.0 The Meme Editor.app */,
-				8A1FA5F11D9F7FC400545AF9 /* MemeMe 1.0 The Meme EditorTests.xctest */,
-				8A1FA5FC1D9F7FC400545AF9 /* MemeMe 1.0 The Meme EditorUITests.xctest */,
+				8A1FA5DD1D9F7FC400545AF9 /* MemeMe.app */,
+				8A1FA5F11D9F7FC400545AF9 /* MemeMeTests.xctest */,
+				8A1FA5FC1D9F7FC400545AF9 /* MemeMeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8A1FA5DF1D9F7FC400545AF9 /* MemeMe 1.0 The Meme Editor */ = {
+		8A1FA5DF1D9F7FC400545AF9 /* MemeMe */ = {
 			isa = PBXGroup;
 			children = (
 				8A1FA5E01D9F7FC400545AF9 /* AppDelegate.swift */,
@@ -130,25 +130,25 @@
 				8A1FA5E91D9F7FC400545AF9 /* LaunchScreen.storyboard */,
 				8A1FA5EC1D9F7FC400545AF9 /* Info.plist */,
 			);
-			path = "MemeMe 1.0 The Meme Editor";
+			path = MemeMe;
 			sourceTree = "<group>";
 		};
-		8A1FA5F41D9F7FC400545AF9 /* MemeMe 1.0 The Meme EditorTests */ = {
+		8A1FA5F41D9F7FC400545AF9 /* MemeMe Tests */ = {
 			isa = PBXGroup;
 			children = (
 				8A1FA5F51D9F7FC400545AF9 /* MemeMe_1_0_The_Meme_EditorTests.swift */,
 				8A1FA5F71D9F7FC400545AF9 /* Info.plist */,
 			);
-			path = "MemeMe 1.0 The Meme EditorTests";
+			path = "MemeMe Tests";
 			sourceTree = "<group>";
 		};
-		8A1FA5FF1D9F7FC400545AF9 /* MemeMe 1.0 The Meme EditorUITests */ = {
+		8A1FA5FF1D9F7FC400545AF9 /* MemeMe UITests */ = {
 			isa = PBXGroup;
 			children = (
 				8A1FA6001D9F7FC400545AF9 /* MemeMe_1_0_The_Meme_EditorUITests.swift */,
 				8A1FA6021D9F7FC400545AF9 /* Info.plist */,
 			);
-			path = "MemeMe 1.0 The Meme EditorUITests";
+			path = "MemeMe UITests";
 			sourceTree = "<group>";
 		};
 		8A298E741DB343A6005B7BA0 /* Frameworks */ = {
@@ -162,9 +162,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8A1FA5DC1D9F7FC400545AF9 /* MemeMe 1.0 The Meme Editor */ = {
+		8A1FA5DC1D9F7FC400545AF9 /* MemeMe */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8A1FA6051D9F7FC400545AF9 /* Build configuration list for PBXNativeTarget "MemeMe 1.0 The Meme Editor" */;
+			buildConfigurationList = 8A1FA6051D9F7FC400545AF9 /* Build configuration list for PBXNativeTarget "MemeMe" */;
 			buildPhases = (
 				8A1FA5D91D9F7FC400545AF9 /* Sources */,
 				8A1FA5DA1D9F7FC400545AF9 /* Frameworks */,
@@ -176,14 +176,14 @@
 			);
 			dependencies = (
 			);
-			name = "MemeMe 1.0 The Meme Editor";
+			name = MemeMe;
 			productName = "MemeMe 1.0 The Meme Editor";
-			productReference = 8A1FA5DD1D9F7FC400545AF9 /* MemeMe 1.0 The Meme Editor.app */;
+			productReference = 8A1FA5DD1D9F7FC400545AF9 /* MemeMe.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8A1FA5F01D9F7FC400545AF9 /* MemeMe 1.0 The Meme EditorTests */ = {
+		8A1FA5F01D9F7FC400545AF9 /* MemeMeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8A1FA6081D9F7FC400545AF9 /* Build configuration list for PBXNativeTarget "MemeMe 1.0 The Meme EditorTests" */;
+			buildConfigurationList = 8A1FA6081D9F7FC400545AF9 /* Build configuration list for PBXNativeTarget "MemeMeTests" */;
 			buildPhases = (
 				8A1FA5ED1D9F7FC400545AF9 /* Sources */,
 				8A1FA5EE1D9F7FC400545AF9 /* Frameworks */,
@@ -194,14 +194,14 @@
 			dependencies = (
 				8A1FA5F31D9F7FC400545AF9 /* PBXTargetDependency */,
 			);
-			name = "MemeMe 1.0 The Meme EditorTests";
+			name = MemeMeTests;
 			productName = "MemeMe 1.0 The Meme EditorTests";
-			productReference = 8A1FA5F11D9F7FC400545AF9 /* MemeMe 1.0 The Meme EditorTests.xctest */;
+			productReference = 8A1FA5F11D9F7FC400545AF9 /* MemeMeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8A1FA5FB1D9F7FC400545AF9 /* MemeMe 1.0 The Meme EditorUITests */ = {
+		8A1FA5FB1D9F7FC400545AF9 /* MemeMeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8A1FA60B1D9F7FC400545AF9 /* Build configuration list for PBXNativeTarget "MemeMe 1.0 The Meme EditorUITests" */;
+			buildConfigurationList = 8A1FA60B1D9F7FC400545AF9 /* Build configuration list for PBXNativeTarget "MemeMeUITests" */;
 			buildPhases = (
 				8A1FA5F81D9F7FC400545AF9 /* Sources */,
 				8A1FA5F91D9F7FC400545AF9 /* Frameworks */,
@@ -212,9 +212,9 @@
 			dependencies = (
 				8A1FA5FE1D9F7FC400545AF9 /* PBXTargetDependency */,
 			);
-			name = "MemeMe 1.0 The Meme EditorUITests";
+			name = MemeMeUITests;
 			productName = "MemeMe 1.0 The Meme EditorUITests";
-			productReference = 8A1FA5FC1D9F7FC400545AF9 /* MemeMe 1.0 The Meme EditorUITests.xctest */;
+			productReference = 8A1FA5FC1D9F7FC400545AF9 /* MemeMeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -224,7 +224,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Kothapalli;
 				TargetAttributes = {
 					8A1FA5DC1D9F7FC400545AF9 = {
@@ -246,7 +246,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8A1FA5D81D9F7FC400545AF9 /* Build configuration list for PBXProject "MemeMe 1.0 The Meme Editor" */;
+			buildConfigurationList = 8A1FA5D81D9F7FC400545AF9 /* Build configuration list for PBXProject "MemeMe" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -259,9 +259,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8A1FA5DC1D9F7FC400545AF9 /* MemeMe 1.0 The Meme Editor */,
-				8A1FA5F01D9F7FC400545AF9 /* MemeMe 1.0 The Meme EditorTests */,
-				8A1FA5FB1D9F7FC400545AF9 /* MemeMe 1.0 The Meme EditorUITests */,
+				8A1FA5DC1D9F7FC400545AF9 /* MemeMe */,
+				8A1FA5F01D9F7FC400545AF9 /* MemeMeTests */,
+				8A1FA5FB1D9F7FC400545AF9 /* MemeMeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -344,12 +344,12 @@
 /* Begin PBXTargetDependency section */
 		8A1FA5F31D9F7FC400545AF9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8A1FA5DC1D9F7FC400545AF9 /* MemeMe 1.0 The Meme Editor */;
+			target = 8A1FA5DC1D9F7FC400545AF9 /* MemeMe */;
 			targetProxy = 8A1FA5F21D9F7FC400545AF9 /* PBXContainerItemProxy */;
 		};
 		8A1FA5FE1D9F7FC400545AF9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8A1FA5DC1D9F7FC400545AF9 /* MemeMe 1.0 The Meme Editor */;
+			target = 8A1FA5DC1D9F7FC400545AF9 /* MemeMe */;
 			targetProxy = 8A1FA5FD1D9F7FC400545AF9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -392,6 +392,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -442,6 +443,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -477,9 +479,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "MemeMe 1.0 The Meme Editor/Info.plist";
+				INFOPLIST_FILE = MemeMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.shashank.MemeMe-1-0-The-Meme-Editor";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shashank.MemeMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -495,9 +497,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "MemeMe 1.0 The Meme Editor/Info.plist";
+				INFOPLIST_FILE = MemeMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.shashank.MemeMe-1-0-The-Meme-Editor";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shashank.MemeMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -514,7 +516,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shashank.MemeMe-1-0-The-Meme-EditorTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MemeMe 1.0 The Meme Editor.app/MemeMe 1.0 The Meme Editor";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MemeMe.app/MemeMe";
 			};
 			name = Debug;
 		};
@@ -529,7 +531,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shashank.MemeMe-1-0-The-Meme-EditorTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MemeMe 1.0 The Meme Editor.app/MemeMe 1.0 The Meme Editor";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MemeMe.app/MemeMe";
 			};
 			name = Release;
 		};
@@ -564,7 +566,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8A1FA5D81D9F7FC400545AF9 /* Build configuration list for PBXProject "MemeMe 1.0 The Meme Editor" */ = {
+		8A1FA5D81D9F7FC400545AF9 /* Build configuration list for PBXProject "MemeMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8A1FA6031D9F7FC400545AF9 /* Debug */,
@@ -573,7 +575,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8A1FA6051D9F7FC400545AF9 /* Build configuration list for PBXNativeTarget "MemeMe 1.0 The Meme Editor" */ = {
+		8A1FA6051D9F7FC400545AF9 /* Build configuration list for PBXNativeTarget "MemeMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8A1FA6061D9F7FC400545AF9 /* Debug */,
@@ -582,7 +584,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8A1FA6081D9F7FC400545AF9 /* Build configuration list for PBXNativeTarget "MemeMe 1.0 The Meme EditorTests" */ = {
+		8A1FA6081D9F7FC400545AF9 /* Build configuration list for PBXNativeTarget "MemeMeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8A1FA6091D9F7FC400545AF9 /* Debug */,
@@ -591,7 +593,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8A1FA60B1D9F7FC400545AF9 /* Build configuration list for PBXNativeTarget "MemeMe 1.0 The Meme EditorUITests" */ = {
+		8A1FA60B1D9F7FC400545AF9 /* Build configuration list for PBXNativeTarget "MemeMeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8A1FA60C1D9F7FC400545AF9 /* Debug */,

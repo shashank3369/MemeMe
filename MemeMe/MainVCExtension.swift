@@ -38,7 +38,6 @@ extension MainVC {
     }
     
     func generateMemedImage() -> UIImage {
-        
         toolBar.isHidden = true
         navigationBar.isHidden = true
         
@@ -52,7 +51,6 @@ extension MainVC {
         toolBar.isHidden = false
         navigationBar.isHidden = false
         return memedImage
-
     }
     
     func save (memedImage: UIImage) {
@@ -60,10 +58,7 @@ extension MainVC {
             imageView.image!, memeImage: memedImage)
     }
     
-    
     func prepareTextField(textField: UITextField, defaultText: String){
-        //aligning to center
-        
         //setting default text
         textField.text = defaultText
         
@@ -75,7 +70,6 @@ extension MainVC {
         
         //aligning to center
         textField.textAlignment = .center
-
     }
     
     func pickPictureWithSource(source: UIImagePickerControllerSourceType) {
