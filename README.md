@@ -1,2 +1,2 @@
 # MemeMe
-Meme Me 1.0 
+Meme Me  
