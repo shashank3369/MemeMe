@@ -59,11 +59,7 @@ class MainVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     }
     
     @IBAction func cancel(_ sender: AnyObject) {
-        imageView.image = nil
-        prepareTextField(textField: bottomTextField, defaultText: "BOTTOM")
-        prepareTextField(textField: topTextField, defaultText: "TOP")
-        shareButton.isEnabled = false
-        updateEditButtonEnabled()
+        dismiss(animated: true, completion: nil)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
