@@ -54,8 +54,12 @@ extension MainVC {
     }
     
     func save (memedImage: UIImage) {
-        let _ = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, image:
+        let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, image:
             imageView.image!, memeImage: memedImage)
+        // Add it to the memes array in the Application Delegate
+        let object = UIApplication.shared.delegate
+        let appDelegate = object as! AppDelegate
+        appDelegate.memes.append(meme)
     }
     
     func prepareTextField(textField: UITextField, defaultText: String){

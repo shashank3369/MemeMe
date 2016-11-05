@@ -30,6 +30,7 @@ class MainVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
                 self.dismiss(animated: true, completion: nil)
             }
         }
+        self.dismiss(animated: true, completion: nil)
     }
     
     let textAttributes = [
