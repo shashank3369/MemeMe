@@ -38,8 +38,7 @@ class MainVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         NSStrokeColorAttributeName: UIColor.black,
         NSForegroundColorAttributeName: UIColor.white,
         NSFontAttributeName: UIFont(name: "Impact", size: 40)!,
-        NSStrokeWidthAttributeName : -3.0
-        
+        NSStrokeWidthAttributeName : -3.0  
     ] as [String : Any]
     
     let textFieldsDelegate = TextFieldsDelegate()

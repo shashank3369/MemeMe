@@ -66,5 +66,26 @@ class MemeTableViewController: UITableViewController {
         detailPageView.memedImage = memes[indexPath.row].memeImage
         self.navigationController?.pushViewController(detailPageView, animated: true)
     }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
 
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        return .delete
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        switch editingStyle {
+            case .delete:
+                let delegate = UIApplication.shared.delegate as! AppDelegate
+                delegate.memes.remove(at: indexPath.row)
+            
+                tableView.reloadData()
+            default:
+                break
+        }
+        
+    }
 }
