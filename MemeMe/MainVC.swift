@@ -37,7 +37,7 @@ class MainVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     let textAttributes = [
         NSStrokeColorAttributeName: UIColor.black,
         NSForegroundColorAttributeName: UIColor.white,
-        NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+        NSFontAttributeName: UIFont(name: "Impact", size: 40)!,
         NSStrokeWidthAttributeName : -3.0
         
     ] as [String : Any]

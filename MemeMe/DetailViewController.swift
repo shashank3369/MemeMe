@@ -10,26 +10,23 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet weak var memedImageView: UIImageView!
+    var memedImage: UIImage?
+    var hidden = false
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        memedImageView.image = memedImage
+        
+        memedImageView.isUserInteractionEnabled = true
+        
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(DetailViewController.handleTap))
+        memedImageView.addGestureRecognizer(tapRecognizer)
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func handleTap() {
+        self.navigationController?.navigationBar.isHidden = !hidden
+        
+        hidden = !hidden
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
