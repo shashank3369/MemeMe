@@ -37,7 +37,7 @@
         <scene sceneID="hEJ-gR-Sp1">
             <objects>
                 <collectionViewController id="HLc-XV-9Rk" customClass="MemeCollectionViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="DoM-FN-8lt">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="DoM-FN-8lt">
                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -57,6 +57,10 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U3O-Nk-EXK">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="501-Wl-4xs"/>
+                                                <constraint firstAttribute="height" constant="100" id="bh0-b9-rUe"/>
+                                            </constraints>
                                         </imageView>
                                     </subviews>
                                 </view>
@@ -297,7 +301,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XDH-iT-8CU" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="table" id="V2t-d3-aO5"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="S2t-zd-XtI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="S2t-zd-XtI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -316,7 +320,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tjR-Ee-jQt" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="collection" id="Pab-OJ-zpY"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sRA-1Y-BZ2">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="sRA-1Y-BZ2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
