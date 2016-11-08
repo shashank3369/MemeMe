@@ -16,10 +16,6 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         memedImageView.image = memedImage
-        
-        memedImageView.isUserInteractionEnabled = true
-        
-        // Do any additional setup after loading the view.
     }
     
 }
