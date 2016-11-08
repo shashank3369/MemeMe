@@ -69,7 +69,6 @@ class MemeCollectionViewController: UICollectionViewController {
         let detailPageView = self.storyboard?.instantiateViewController(withIdentifier: "detailView") as! DetailViewController
         detailPageView.memedImage = memes[indexPath.item].memeImage
         self.navigationController?.pushViewController(detailPageView, animated: true)
-        self.tabBarController?.hidesBottomBarWhenPushed = true
     }
 
 }

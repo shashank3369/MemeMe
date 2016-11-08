@@ -19,14 +19,7 @@ class DetailViewController: UIViewController {
         
         memedImageView.isUserInteractionEnabled = true
         
-        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(DetailViewController.handleTap))
-        memedImageView.addGestureRecognizer(tapRecognizer)
         // Do any additional setup after loading the view.
     }
-
-    func handleTap() {
-        self.navigationController?.navigationBar.isHidden = !hidden
-        
-        hidden = !hidden
-    }
+    
 }
