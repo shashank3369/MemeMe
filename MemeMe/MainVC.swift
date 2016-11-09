@@ -29,7 +29,6 @@ class MainVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
                 self.save(memedImage: generatedImage)
                 self.dismiss(animated: true, completion: nil)
                 self.dismiss(animated: true, completion: nil)
-
             }
         }
     }
@@ -95,9 +94,6 @@ class MainVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageView.image = image
-        }
-        else {
-            
         }
         dismiss(animated: true, completion: nil)
         updateEditButtonEnabled()

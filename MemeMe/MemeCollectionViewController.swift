@@ -19,10 +19,7 @@ class MemeCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(MemeCollectionViewController.addMeme))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(MemeCollectionViewController.addMeme))
         
         let space: CGFloat = 3.0
         let dimension = (view.frame.size.width - (2 * space)) / 3.0
@@ -68,7 +65,7 @@ class MemeCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let detailPageView = self.storyboard?.instantiateViewController(withIdentifier: "detailView") as! DetailViewController
         detailPageView.memedImage = memes[indexPath.item].memeImage
-        self.navigationController?.pushViewController(detailPageView, animated: true)
+        navigationController?.pushViewController(detailPageView, animated: true)
     }
 
 }
